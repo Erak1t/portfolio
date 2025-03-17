@@ -1,0 +1,79 @@
+{
+  "bio": "I’m Erik Sodel, a passionate Frontend Developer with over 2 years of experience in building responsive and user-friendly web applications. I specialize in HTML, CSS, JavaScript, and React, and I love exploring new technologies to create innovative solutions. My journey in coding started with a curiosity for how websites work, and now I turn ideas into reality with clean, efficient code.",
+  "education": {
+    "institution": "Wrocław University of Science and Technology (Politechnika Wrocławska)",
+    "degree": "Bachelor’s Degree in Industrial Computer Science",
+    "specialization": "Intelligent Industrial Systems",
+    "discipline": "Information and Communication Technology",
+    "profile": "Practical study profile, full-time",
+    "graduated": "September 2022"
+  },
+  "languages": [
+    "Ukrainian (Native)",
+    "English (Fluent)",
+    "Polish (Fluent)",
+    "Russian (Fluent)"
+  ],
+  "certificates": [
+    {
+      "title": "Full Stack Web Development",
+      "provider": "Codefinity",
+      "year": 2025,
+      "link": "https://codefinity.com/ua/certificate/227c54d2-2d43-4e92-b8b2-8a2d09f56835/track/1666fdac-f359-4c9a-a929-63ce9618bdd5"
+    },
+    {
+      "title": "Ultimate HTML",
+      "provider": "Codefinity",
+      "year": 2025,
+      "link": "https://codefinity.com/certificate/227c54d2-2d43-4e92-b8b2-8a2d09f56835/c468052d-6d47-4677-b1d1-fb11ace719b1"
+    },
+    {
+      "title": "CSS Fundamentals",
+      "provider": "Codefinity",
+      "year": 2025,
+      "link": "https://codefinity.com/certificate/227c54d2-2d43-4e92-b8b2-8a2d09f56835/a5d6ef50-cbf5-4a95-89d4-475b704cd811"
+    },
+    {
+      "title": "Introduction to JavaScript",
+      "provider": "Codefinity",
+      "year": 2025,
+      "link": "https://codefinity.com/certificate/227c54d2-2d43-4e92-b8b2-8a2d09f56835/515d0daa-521e-42b6-8924-7df40da6d6ac"
+    },
+    {
+      "title": "JavaScript Data Structures",
+      "provider": "Codefinity",
+      "year": 2025,
+      "link": "https://codefinity.com/certificate/227c54d2-2d43-4e92-b8b2-8a2d09f56835/7995e502-8380-445b-a6b6-dccb0e1b8c3b"
+    },
+    {
+      "title": "Advanced JavaScript Mastery",
+      "provider": "Codefinity",
+      "year": 2025,
+      "link": "https://codefinity.com/certificate/227c54d2-2d43-4e92-b8b2-8a2d09f56835/3ad37fbc-0d15-4d27-bee7-b107747da548"
+    },
+    {
+      "title": "React Mastery",
+      "provider": "Codefinity",
+      "year": 2025,
+      "link": "https://codefinity.com/certificate/227c54d2-2d43-4e92-b8b2-8a2d09f56835/1dcaf86a-11aa-492e-8e1d-06e055479aa9"
+    },
+    {
+      "title": "Backend Development with Node.js and Express.js",
+      "provider": "Codefinity",
+      "year": 2025,
+      "link": "https://codefinity.com/certificate/227c54d2-2d43-4e92-b8b2-8a2d09f56835/8c50b100-1d6b-4830-a9a4-5fd966c78e38"
+    }
+  ],
+  "currentBooks": [
+    {
+      "title": "Software Requirements Third Edition",
+      "author": "Karl Wiegers and Joy Beatty",
+      "status": "Reading"
+    },
+    {
+      "title": "BABOK (Business Analysis Body Of Knowledge",
+      "author": "Cajoo Windy",
+      "status": "In Progress"
+    }
+  ]
+}

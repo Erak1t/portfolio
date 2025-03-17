@@ -1,0 +1,182 @@
+.projects {
+  background: var(--background-dark);
+  padding: 50px 150px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+.projects-title {
+  color: var(--secondary-text-dark);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.project-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.projects-item:hover {
+  transform: translateY(-5px);
+}
+.project-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+
+  box-shadow: 0px 4px 10px rgb(255, 255, 255, 0.3);
+}
+.project-info {
+  padding: 20px;
+  text-align: left;
+}
+.project-info h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+.description {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  color: var(--secondary-text-dark);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.tech-tag {
+  background: rgba(84, 114, 165, 0.2);
+  color: #bbb;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+}
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+.project-links a {
+  color: #28a745;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+.project-links a:hover {
+  color: #218838;
+}
+/* Світла тема */
+body.light .projects {
+  background: var(--background-light);
+}
+
+body.light .projects-title {
+  color: var(--secondary-text-light);
+}
+
+body.light .project-item {
+  background: rgba(240, 240, 240, 0.5);
+}
+
+body.light .project-info h4 {
+  color: var(--text-light);
+}
+
+body.light .description {
+  color: var(--secondary-text-light);
+}
+
+body.light .tech-tag {
+  background: rgba(173, 216, 230, 0.2);
+  color: #666;
+}
+
+body.light .project-links a {
+  color: #218838;
+}
+
+body.light .project-links a:hover {
+  color: #28a745;
+}
+body.light .project-image img {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+/* Адаптивність */
+@media (max-width: 768px) {
+  .projects {
+    padding: 30px 0;
+  }
+
+  .projects-title {
+    font-size: 1.3rem;
+  }
+
+  .projects-list {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  .project-item {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .project-image img {
+    height: 250px;
+    width: 400px;
+  }
+
+  .project-info h4 {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .tech-tag {
+    font-size: 0.8rem;
+  }
+
+  .project-links a {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-title {
+    font-size: 1.2rem;
+  }
+
+  .project-image img {
+    height: 120px;
+  }
+
+  .project-info h4 {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+
+  .project-links a {
+    font-size: 0.8rem;
+  }
+}

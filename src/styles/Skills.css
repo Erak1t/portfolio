@@ -1,0 +1,303 @@
+.skills {
+  background: var(--background-dark);
+  padding: 50px 0;
+  text-align: center;
+}
+.worked-with {
+  margin-bottom: 60px;
+}
+.worked-with-title {
+  color: var(--secondary-text-dark);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.logo {
+  background: rgba(84, 114, 165, 0.1);
+  color: #bbb;
+  padding: 15px 25px;
+  border-radius: 30px;
+  display: inline-flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  transition: transform 0.3s, background 0.3s;
+  animation: slideUp 1.5s ease-in-out backwards;
+}
+.logo img {
+  width: 100px;
+  height: 50px;
+  object-fit: contain;
+}
+.logo:hover {
+  background: rgba(49, 55, 159, 0.2);
+  transform: scale(1.2);
+}
+.logo img:hover {
+  filter: brightness(1.4);
+}
+.skills-details-section {
+  padding: 20px 0;
+}
+.skills-details-title {
+  color: var(--secondary-text-dark);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.skills-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.skill-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgb(255, 255, 255, 0.3);
+  animation: slideUp 1.5s ease-in-out backwards;
+}
+.skill-detail-item:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+.skill-detail-item.left {
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-right: auto;
+  margin-left: 200px;
+  animation: slideInLeft 1.5s ease-in-out backwards;
+}
+.skill-detail-item.right {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 200px;
+  animation: slideInRight 1.5s ease-in-out backwards;
+}
+.skill-detail-logo {
+  background: #d3d3d3;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s, background 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.skill-detail-logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.skill-detail-logo:hover {
+  background: #c0c0c0;
+  transform: scale(1.1);
+}
+.skill-detail-info {
+  text-align: left;
+  flex: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+.skill-detail-info- .summary {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--secondary-text-dark);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.skill-detail-info .details {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  color: var(--secondary-text-dark);
+  line-height: 1.7;
+  opacity: 0.85; /* Легке затемнення для деталей */
+}
+
+body.light .worked-with {
+  background: var(--background-light);
+}
+body.light .worked-with-title,
+body.light .skills-details-title {
+  color: var(--secondary-text-light);
+}
+body.light .logo,
+body.light .skill-detail-logo {
+  background: rgba(0, 0, 0, 0.2);
+}
+body.light .logo:hover,
+body.light .skill-detail-logo:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+body.light .skills {
+  background: var(--background-light);
+}
+body.light .skill-detail-item {
+  background: rgba(0, 0, 0, 0.05); /* Легкий фон для світлої теми */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+body.light .skill-detail-info h4 {
+  color: var(--text-light);
+}
+body.light .skill-detail-info .summary,
+body.light .skill-detail-info .details {
+  color: var(--secondary-text-light);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 1024px) {
+  .skill-detail-item {
+    flex-direction: column; /* Логотип зверху, текст знизу */
+    text-align: center;
+    gap: 20px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .skill-detail-item.left {
+    margin-right: 20px;
+  }
+  .skill-detail-item.right {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .skills {
+    padding: 30px 0;
+  }
+  .worked-with-title,
+  .skills-details-title {
+    font-size: 1.3rem;
+  }
+
+  .logos {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 150px;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 20px;
+  }
+  .logo img {
+    width: 80px;
+    height: 30px;
+  }
+  .skill-detail-item {
+    flex-direction: column; /* Логотип зверху, текст знизу */
+    text-align: center;
+    gap: 20px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .skill-detail-item.left,
+  .skill-detail-item.right {
+    flex-direction: column; /* Скидаємо чергування для мобільних */
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .skill-detail-logo {
+    padding: 15px;
+  }
+
+  .skill-detail-logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill-detail-info {
+    text-align: center;
+  }
+
+  .skill-detail-info h4 {
+    font-size: 1.5rem;
+  }
+
+  .skill-detail-info .summary {
+    font-size: 1rem;
+  }
+
+  .skill-detail-info .details {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .worked-with-title,
+  .skills-details-title {
+    font-size: 1.2rem;
+  }
+
+  .skill-detail-item {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .skill-detail-info h4 {
+    font-size: 1.3rem;
+  }
+
+  .skill-detail-info .summary {
+    font-size: 0.9rem;
+  }
+
+  .skill-detail-info .details {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,206 @@
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+.info {
+  background: var(--background-dark);
+  padding: 50px 0;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.info-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.info-title {
+  color: var(--secondary-text-dark);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.info-bio {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: var(--secondary-text-dark);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.info-education h4,
+.info-languages h4,
+.info-certificates h4,
+.info-books h4 {
+  color: var(--secondary-text-dark);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.info-education ul,
+.info-languages ul,
+.info-certificates ul,
+.info-books ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.info-education li,
+.info-languages li,
+.info-certificates li,
+.info-books li {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  color: var(--secondary-text-dark);
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.info-education li:before,
+.info-languages li:before,
+.info-books li:before {
+  content: "✓";
+  color: #28a745;
+  position: absolute;
+  left: 0;
+}
+
+.info-education p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  color: var(--secondary-text-dark);
+  margin-bottom: 10px;
+}
+
+.certificate-link {
+  color: #28a745;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.certificate-link:hover {
+  color: #218838;
+}
+
+.info-call-to-action {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: var(--secondary-text-dark);
+  margin-top: 30px;
+}
+
+.info-call-to-action a {
+  color: #28a745;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.info-call-to-action a:hover {
+  color: #218838;
+}
+
+.info-social {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Додано для відступів між іконками */
+}
+
+.info-social a {
+  color: #28a745;
+  font-size: 1.5rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.info-social a:hover {
+  color: #218838;
+}
+
+.info-copyright {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  color: var(--secondary-text-dark);
+  margin-top: 20px;
+}
+
+/* Світла тема */
+body.light .info {
+  background: var(--background-light);
+}
+
+body.light .info-title,
+body.light .info-bio,
+body.light .info-education h4,
+body.light .info-languages h4,
+body.light .info-certificates h4,
+body.light .info-books h4,
+body.light .info-education li,
+body.light .info-languages li,
+body.light .info-certificates li,
+body.light .info-books li,
+body.light .info-education p,
+body.light .info-call-to-action,
+body.light .info-copyright {
+  color: var(--secondary-text-light);
+}
+
+body.light .info-call-to-action a,
+body.light .certificate-link {
+  color: #218838;
+}
+
+body.light .info-call-to-action a:hover,
+body.light .certificate-link:hover {
+  color: #28a745;
+}
+
+body.light .info-social a {
+  color: #218838;
+}
+
+body.light .info-social a:hover {
+  color: #28a745;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .info {
+    padding: 30px 0;
+  }
+
+  .info-title {
+    font-size: 1.3rem;
+  }
+
+  .info-bio {
+    font-size: 0.95rem;
+  }
+
+  .info-education h4,
+  .info-languages h4,
+  .info-certificates h4,
+  .info-books h4 {
+    font-size: 1.1rem;
+  }
+
+  .info-education li,
+  .info-languages li,
+  .info-certificates li,
+  .info-books li,
+  .info-education p {
+    font-size: 0.9rem;
+  }
+
+  .info-call-to-action {
+    font-size: 0.95rem;
+  }
+
+  .info-social a {
+    font-size: 1.3rem;
+  }
+}

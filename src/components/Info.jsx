@@ -7,7 +7,7 @@ import infoData from "../data/infoData.json";
 function Info() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
-    once: false,
+    once: true,
     margin: "0px 0px -100px 0px",
   });
 

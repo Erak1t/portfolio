@@ -36,7 +36,7 @@ function Skills() {
           {skillsData.map((skill, index) => {
             const ref = useRef(null);
             const isInView = useInView(ref, {
-              once: false,
+              once: true,
               margin: "0px 0px -100px 0px",
               threshold: 0.2,
             });

@@ -1,9 +1,12 @@
+/* src/styles/Projects.css */
 .projects {
   background: var(--background-dark);
-  padding: 50px 150px;
+  padding: 50px 150px; /* Залишаємо для великих екранів */
   text-align: center;
   transition: background-color 0.3s;
+  overflow-x: hidden; /* Забороняємо горизонтальний скрол */
 }
+
 .projects-title {
   color: var(--secondary-text-dark);
   font-family: "Roboto", sans-serif;
@@ -11,6 +14,7 @@
   margin-bottom: 40px;
   animation: fadeIn 1.5s ease-in-out;
 }
+
 .projects-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -19,33 +23,39 @@
   margin: 0 auto;
   padding: 0 20px;
 }
+
 .project-item {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Для анімації hover */
 }
-.projects-item:hover {
+
+.project-item:hover {
   transform: translateY(-5px);
 }
+
 .project-image img {
   width: 100%;
-  height: 250px;
+  height: auto; /* Динамічна висота для адаптивності */
   object-fit: cover;
   border-radius: 15px;
-
-  box-shadow: 0px 4px 10px rgb(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
 }
+
 .project-info {
   padding: 20px;
   text-align: left;
 }
+
 .project-info h4 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: var(--text-dark);
 }
+
 .description {
   font-family: "Roboto", sans-serif;
   font-size: 0.95rem;
@@ -53,12 +63,14 @@
   line-height: 1.6;
   margin-bottom: 15px;
 }
+
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 15px;
 }
+
 .tech-tag {
   background: rgba(84, 114, 165, 0.2);
   color: #bbb;
@@ -67,10 +79,12 @@
   font-family: "Roboto", sans-serif;
   font-size: 0.85rem;
 }
+
 .project-links {
   display: flex;
   gap: 15px;
 }
+
 .project-links a {
   color: #28a745;
   text-decoration: none;
@@ -78,9 +92,11 @@
   font-size: 1rem;
   transition: color 0.3s;
 }
+
 .project-links a:hover {
   color: #218838;
 }
+
 /* Світла тема */
 body.light .projects {
   background: var(--background-light);
@@ -114,13 +130,15 @@ body.light .project-links a {
 body.light .project-links a:hover {
   color: #28a745;
 }
+
 body.light .project-image img {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
+
 /* Адаптивність */
 @media (max-width: 768px) {
   .projects {
-    padding: 30px 0;
+    padding: 30px 20px; /* Зменшуємо відступи для малих екранів */
   }
 
   .projects-title {
@@ -128,34 +146,13 @@ body.light .project-image img {
   }
 
   .projects-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Одна колонка на малих екранах */
     padding: 0 10px;
   }
 
-  .project-item {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
   .project-image img {
-    height: 250px;
-    width: 400px;
-  }
-
-  .project-info h4 {
-    font-size: 1.3rem;
-  }
-
-  .description {
-    font-size: 0.9rem;
-  }
-
-  .tech-tag {
-    font-size: 0.8rem;
-  }
-
-  .project-links a {
-    font-size: 0.85rem;
+    max-width: 80%; /* Забезпечуємо, що зображення не перевищує ширину контейнера */
+    height: auto; /* Динамічна висота */
   }
 }
 
@@ -164,10 +161,6 @@ body.light .project-image img {
     font-size: 1.2rem;
   }
 
-  .project-image img {
-    height: 120px;
-  }
-
   .project-info h4 {
     font-size: 1.2rem;
   }
@@ -178,5 +171,15 @@ body.light .project-image img {
 
   .project-links a {
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .projects {
+    padding: 20px 10px; /* Ще менші відступи для дуже малих екранів */
+  }
+
+  .project-image img {
+    height: auto; /* Зменшуємо висоту для iPhone SE */
   }
 }

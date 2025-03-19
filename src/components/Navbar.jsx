@@ -1,7 +1,16 @@
+// src/components/Navbar.jsx
 import { useState, useEffect } from "react";
 import "../styles/Navbar.css";
 import { motion } from "framer-motion";
-import debounce from "lodash/debounce"; // Імпортуємо debounce
+
+// Власна реалізація debounce
+function debounce(func, wait) {
+  let timeout;
+  return function (...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
 
 function Navbar({ toggleTheme, theme, navVisible }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +42,6 @@ function Navbar({ toggleTheme, theme, navVisible }) {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
-      handleScroll.cancel(); // Скасовуємо debounce при розмонтуванні
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY, isMenuOpen, handleScroll]);

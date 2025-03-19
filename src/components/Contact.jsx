@@ -55,7 +55,7 @@ function Contact() {
         className="contact-title"
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         Get in Touch
       </motion.h3>
@@ -63,7 +63,7 @@ function Contact() {
         className="contact-content"
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
       >
         <div className="contact-info">
           <p>Feel free to reach out for collaboration or inquiries!</p>

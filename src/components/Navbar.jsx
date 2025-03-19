@@ -71,6 +71,32 @@ function Navbar({ toggleTheme, theme }) {
               Info
             </a>
           </li>
+          <li className="social-links-mobile">
+            <a
+              href="https://www.linkedin.com/in/erik-sodel-680ab327a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/sodel.erik/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://github.com/Erak1t"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i className="fab fa-github"></i>
+            </a>
+          </li>
         </ul>
         <div className="navbar-right">
           <label className="switch" aria-label="Toggle theme">

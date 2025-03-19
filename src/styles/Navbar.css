@@ -1,6 +1,7 @@
+/* src/styles/Navbar.css */
 body {
-  touch-action: pan-y; /* Дозволяємо вертикальний скрол */
-  -webkit-overflow-scrolling: touch; /* Покращуємо плавність скролу на iOS */
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .navbar {
@@ -12,14 +13,14 @@ body {
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
-  left: 100px; /* Відступи з боків на великих екранах */
-  width: calc(100% - 200px); /* Ширина з урахуванням відступів */
+  left: 100px;
+  width: calc(100% - 200px);
   z-index: 1000;
   backdrop-filter: blur(5px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, background-color 0.3s;
   touch-action: pan-y;
-  will-change: opacity; /* Оптимізація анімації */
+  will-change: opacity;
 }
 
 .navbar-content {
@@ -35,7 +36,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   color: #baacac;
-  display: none; /* Приховуємо логотип на великих екранах */
+  display: none;
 }
 
 .navbar-right {
@@ -68,7 +69,7 @@ body {
   font-size: 1.5rem;
   color: #baacac;
   cursor: pointer;
-  display: none; /* Приховуємо гамбургер за замовчуванням на великих екранах */
+  display: none;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 50%;
   width: 40px;
@@ -141,7 +142,11 @@ input:checked + .slider:before {
 }
 
 .social-links i {
-  font-size: 1.5rem; /* Розмір іконок Font Awesome */
+  font-size: 1.5rem;
+}
+
+.social-links-mobile {
+  display: none; /* Приховуємо за замовчуванням */
 }
 
 /* Світла тема */
@@ -200,10 +205,6 @@ body.light input:checked + .slider {
     border-radius: 0;
   }
 
-  .navbar.hidden {
-    transform: translateY(-100%);
-  }
-
   .navbar-content {
     justify-content: space-between;
     padding: 0 15px;
@@ -240,18 +241,30 @@ body.light input:checked + .slider {
   }
 
   .social-links {
-    display: none;
+    display: none; /* Приховуємо соціальні іконки в navbar-right на малих екранах */
   }
 
-  .navbar.open .social-links {
-    display: flex;
-    position: absolute;
-    bottom: 50px;
-    gap: 20px;
+  .navbar.open .social-links-mobile {
+    display: flex; /* Показуємо іконки внизу меню */
+    flex-direction: row; /* У рядок */
+    gap: 25px; /* Відстань між іконками */
+    margin-top: 40px; /* Додаємо відступ зверху, щоб відокремити від пунктів меню */
+  }
+
+  .navbar.open .social-links-mobile a {
+    color: #d1d1d1; /* Світліший колір для контрасту */
+  }
+
+  .navbar.open .social-links-mobile a:hover {
+    color: #fff;
+  }
+
+  .navbar.open .social-links-mobile i {
+    font-size: 2rem; /* Збільшуємо розмір іконок */
   }
 
   .hamburger {
-    display: flex; /* Показуємо гамбургер лише на малих екранах */
+    display: flex;
     opacity: 1;
   }
 
@@ -259,11 +272,11 @@ body.light input:checked + .slider {
     background: rgba(255, 255, 255, 0.9);
   }
 
-  body.light .navbar.open .social-links a {
+  body.light .navbar.open .social-links-mobile a {
     color: #333;
   }
 
-  body.light .navbar.open .social-links a:hover {
+  body.light .navbar.open .social-links-mobile a:hover {
     color: #000;
   }
 }
@@ -277,8 +290,13 @@ body.light input:checked + .slider {
     font-size: 1.3rem;
   }
 
-  .social-links {
-    bottom: 30px;
+  .navbar.open .social-links-mobile {
+    gap: 20px; /* Зменшуємо відстань між іконками */
+    margin-top: 30px; /* Зменшуємо відступ зверху */
+  }
+
+  .navbar.open .social-links-mobile i {
+    font-size: 1.8rem; /* Зменшуємо розмір іконок для малих екранів */
   }
 
   .hamburger {

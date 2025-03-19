@@ -17,14 +17,14 @@ function Info() {
         className="info-content"
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <h3 className="info-title">About Me</h3>
         <motion.div
           className="info-bio-container"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         >
           <p className="info-bio">{infoData.bio}</p>
         </motion.div>
@@ -32,7 +32,7 @@ function Info() {
           className="info-education"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
         >
           <h4>Education</h4>
           <p>
@@ -49,7 +49,7 @@ function Info() {
           className="info-languages"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
         >
           <h4>Languages</h4>
           <ul>
@@ -62,7 +62,7 @@ function Info() {
           className="info-certificates"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
         >
           <h4>Certificates</h4>
           <ul>
@@ -85,7 +85,7 @@ function Info() {
           className="info-books"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1.0, ease: "easeOut" }}
+          transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
         >
           <h4>Currently Reading</h4>
           <ul>
@@ -101,7 +101,7 @@ function Info() {
           className="info-call-to-action-container"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
+          transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
         >
           <p className="info-call-to-action">
             Interested in working together? Feel free to{" "}
@@ -113,7 +113,7 @@ function Info() {
           className="info-social-container"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1.4, ease: "easeOut" }}
+          transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
         >
           <div className="info-social">
             <motion.a
@@ -149,7 +149,7 @@ function Info() {
           className="info-copyright-container"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, delay: 0.9, ease: "easeOut" }}
         >
           <p className="info-copyright">
             © 2025 Erik Sodel. All rights reserved.

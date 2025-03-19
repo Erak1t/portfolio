@@ -39,6 +39,7 @@ body.light {
 }
 .app {
   overflow-x: hidden;
+  overflow-y: hidden;
   margin: 0 100px;
   max-width: 1200px;
   margin-left: auto;

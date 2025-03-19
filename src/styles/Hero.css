@@ -9,6 +9,7 @@
   background: var(--background-dark);
   color: var(--text-dark);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  overflow: visible;
   touch-action: pan-y; /* Дозволяємо вертикальний скрол */
   -webkit-overflow-scrolling: touch; /* Покращуємо скрол на iOS */
 }

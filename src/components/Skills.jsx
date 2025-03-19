@@ -58,7 +58,7 @@ function Skills() {
                 transition={{
                   duration: 0.5, // Зменшуємо тривалість
                   ease: "easeOut",
-                  delay: index * 0.2, // Збільшуємо затримку між анімаціями
+                  delay: index * 0.1, // Збільшуємо затримку між анімаціями
                 }}
                 style={{ willChange: "opacity, transform" }} // Оптимізація рендерингу
               >

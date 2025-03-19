@@ -3,48 +3,21 @@ import { useState, useEffect } from "react";
 import "../styles/Navbar.css";
 import { motion } from "framer-motion";
 
-// Власна реалізація debounce
-function debounce(func, wait) {
-  let timeout;
-  return function (...args) {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(this, args), wait);
-  };
-}
-
-function Navbar({ toggleTheme, theme, navVisible }) {
+function Navbar({ toggleTheme, theme }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolledDown, setIsScrolledDown] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
-  // Функція для дебounced обробки скролу
-  const handleScroll = debounce(() => {
-    const currentScrollY = window.scrollY;
-
-    // Визначаємо напрямок скролу
-    if (currentScrollY > lastScrollY && currentScrollY > 50) {
-      // Скрол вниз
-      setIsScrolledDown(true);
-    } else if (currentScrollY < lastScrollY) {
-      // Скрол вгору
-      setIsScrolledDown(false);
-    }
-
-    setLastScrollY(currentScrollY);
-
-    // Закриваємо меню при скролі
-    if (isMenuOpen && currentScrollY > 50) {
-      setIsMenuOpen(false);
-    }
-  }, 100); // Затримка 100мс для згладжування
-
-  // Ефект для відстеження скролу
+  // Закриваємо меню при скролі (залишаємо цю логіку для мобільних)
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (isMenuOpen && currentScrollY > 50) {
+        setIsMenuOpen(false);
+      }
     };
-  }, [lastScrollY, isMenuOpen, handleScroll]);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMenuOpen]);
 
   // Функція для плавного скролу
   const handleNavigator = (e, targetId) => {
@@ -64,15 +37,11 @@ function Navbar({ toggleTheme, theme, navVisible }) {
 
   return (
     <motion.nav
-      className={`navbar ${isScrolledDown && !isMenuOpen ? "hidden" : ""} ${
-        isMenuOpen ? "open" : ""
-      }`}
+      className={`navbar ${isMenuOpen ? "open" : ""}`}
       initial={{ opacity: 0 }}
-      animate={{
-        opacity: isScrolledDown && !isMenuOpen ? 0 : 1, // Ховаємо через opacity
-      }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
-      style={{ willChange: "opacity" }} // Оптимізація анімації
+      animate={{ opacity: 1 }} // Завжди видимий
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      style={{ willChange: "opacity" }}
     >
       <div className="navbar-content">
         <div className="navbar-logo">Erik Sodel</div>

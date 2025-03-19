@@ -1,3 +1,4 @@
+// src/components/Skills.jsx
 import "../styles/Skills.css";
 import cssLogo from "../assets/css.svg";
 import htmlLogo from "../assets/html.svg";
@@ -17,6 +18,7 @@ const logoMap = {
   "react.svg": reactLogo,
   "api.svg": apiLogo,
 };
+
 function Skills() {
   return (
     <div className="skills">
@@ -31,15 +33,16 @@ function Skills() {
         </div>
       </section>
       <section className="skills-details-section">
-        <h3 className="skills-details-title"> What i've Learned</h3>
+        <h3 className="skills-details-title">What I've Learned</h3>
         <div className="skills-details-list">
           {skillsData.map((skill, index) => {
             const ref = useRef(null);
             const isInView = useInView(ref, {
-              once: true,
+              once: true, // Анімація запускається лише раз
               margin: "0px 0px -100px 0px",
               threshold: 0.2,
             });
+
             return (
               <motion.div
                 ref={ref}
@@ -47,16 +50,17 @@ function Skills() {
                 className={`skill-detail-item ${
                   index % 2 === 0 ? "left" : "right"
                 }`}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }} // З’явлення зліва/справа
+                initial={{ opacity: 0, y: 20 }} // Спрощуємо анімацію: лише opacity і легкий рух знизу
                 animate={{
                   opacity: isInView ? 1 : 0,
-                  x: isInView ? 0 : index % 2 === 0 ? -50 : 50,
+                  y: isInView ? 0 : 20,
                 }}
                 transition={{
-                  duration: 0.6,
+                  duration: 0.5, // Зменшуємо тривалість
                   ease: "easeOut",
-                  delay: index * 0.1,
+                  delay: index * 0.2, // Збільшуємо затримку між анімаціями
                 }}
+                style={{ willChange: "opacity, transform" }} // Оптимізація рендерингу
               >
                 <div className="skill-detail-logo">
                   <img src={logoMap[skill.logo]} alt={skill.name} />

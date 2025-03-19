@@ -10,10 +10,18 @@
   --margin-dark: #2a2a2a; /* Колір для відступів у темній темі */
   --margin-light: #e0e0e0; /* Колір для відступів у світлій темі */
 }
+#root {
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html {
+  touch-action: pan-y; /* Дозволяємо вертикальний скрол */
+  -webkit-overflow-scrolling: touch; /* Покращуємо скрол на iOS */
 }
 
 body {
@@ -22,6 +30,8 @@ body {
   background-color: var(--margin-dark);
   color: var(--text-dark);
   transition: background-color 0.3s, color 0.3s;
+  touch-action: pan-y; /* Дозволяємо вертикальний скрол */
+  -webkit-overflow-scrolling: touch; /* Покращуємо скрол на iOS */
 }
 body.light {
   background-color: var(--margin-light);

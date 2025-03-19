@@ -53,7 +53,7 @@ function Skills() {
                   x: isInView ? 0 : index % 2 === 0 ? -50 : 50,
                 }}
                 transition={{
-                  duration: 0.8,
+                  duration: 0.6,
                   ease: "easeOut",
                   delay: index * 0.1,
                 }}

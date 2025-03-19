@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 80px;
+  padding: 20px 70px;
   border-radius: 5px;
   box-sizing: border-box;
   min-height: calc(100vh - 50px);
@@ -109,6 +109,7 @@ body.light .hero-button:hover {
     flex-direction: column;
     padding: 20px 0;
     text-align: center;
+    min-height: 100vh;
   }
 
   .hero-content {

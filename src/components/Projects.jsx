@@ -28,7 +28,7 @@ function Projects() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{
-              duration: 0.6,
+              duration: 1.2,
               ease: "easeOut",
               delay: index * 0.2,
             }}

@@ -20,13 +20,33 @@ const logoMap = {
 };
 
 function Skills() {
+  // Функція для прокрутки до відповідного skill-detail-item
+  const handleLogoClick = (skillName) => {
+    const targetElement = document.querySelector(
+      `.skill-detail-item .skill-detail-logo img[id="${skillName}"]`
+    );
+    if (targetElement) {
+      // Прокручуємо до батьківського .skill-detail-item
+      const parentElement = targetElement.closest(".skill-detail-item");
+      if (parentElement) {
+        parentElement.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+  };
+
   return (
     <div className="skills">
       <section className="worked-with">
         <h3 className="worked-with-title">Technologies</h3>
         <div className="logos">
           {skillsData.map((skill) => (
-            <div className="logo" key={skill.name}>
+            <div
+              className="logo"
+              key={skill.name}
+              id={skill.name}
+              onClick={() => handleLogoClick(skill.name)} // Додаємо обробник кліку
+              style={{ cursor: "pointer" }} // Додаємо курсор для кращої UX
+            >
               <img src={logoMap[skill.logo]} alt={skill.name} />
             </div>
           ))}
@@ -38,7 +58,7 @@ function Skills() {
           {skillsData.map((skill, index) => {
             const ref = useRef(null);
             const isInView = useInView(ref, {
-              once: true, // Анімація запускається лише раз
+              once: true,
               margin: "0px 0px -100px 0px",
               threshold: 0.2,
             });
@@ -50,20 +70,24 @@ function Skills() {
                 className={`skill-detail-item ${
                   index % 2 === 0 ? "left" : "right"
                 }`}
-                initial={{ opacity: 0, y: 20 }} // Спрощуємо анімацію: лише opacity і легкий рух знизу
+                initial={{ opacity: 0, x: 50 }}
                 animate={{
                   opacity: isInView ? 1 : 0,
-                  y: isInView ? 0 : 20,
+                  x: isInView ? 0 : 50,
                 }}
                 transition={{
-                  duration: 0.5, // Зменшуємо тривалість
+                  duration: 0.5,
                   ease: "easeOut",
-                  delay: index * 0.1, // Збільшуємо затримку між анімаціями
+                  delay: index * 0.1,
                 }}
-                style={{ willChange: "opacity, transform" }} // Оптимізація рендерингу
+                style={{ willChange: "opacity, transform" }}
               >
                 <div className="skill-detail-logo">
-                  <img src={logoMap[skill.logo]} alt={skill.name} />
+                  <img
+                    src={logoMap[skill.logo]}
+                    alt={skill.name}
+                    id={skill.name}
+                  />
                 </div>
                 <div className="skill-detail-info">
                   <h4>{skill.name}</h4>

@@ -38,10 +38,10 @@ function Navbar({ toggleTheme, theme }) {
   return (
     <motion.nav
       className={`navbar ${isMenuOpen ? "open" : ""}`}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }} // Завжди видимий
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      style={{ willChange: "opacity" }}
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }} // Завжди видимий
+      transition={{ duration: 1, ease: "easeOut" }}
+      //style={{ willChange: "opacity" }}
     >
       <div className="navbar-content">
         <div className="navbar-logo">Erik Sodel</div>

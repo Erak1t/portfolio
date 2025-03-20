@@ -63,6 +63,9 @@ function Skills() {
               threshold: 0.2,
             });
 
+            const isLeft = index % 2 === 0;
+            const initialX = isLeft ? -50 : 50;
+
             return (
               <motion.div
                 ref={ref}
@@ -70,15 +73,15 @@ function Skills() {
                 className={`skill-detail-item ${
                   index % 2 === 0 ? "left" : "right"
                 }`}
-                initial={{ opacity: 0, x: 50 }}
+                initial={{ opacity: 0, x: initialX }}
                 animate={{
                   opacity: isInView ? 1 : 0,
-                  x: isInView ? 0 : 50,
+                  x: isInView ? 0 : initialX,
                 }}
                 transition={{
-                  duration: 0.5,
+                  duration: 0.8,
                   ease: "easeOut",
-                  delay: index * 0.1,
+                  delay: index * 0.2,
                 }}
                 style={{ willChange: "opacity, transform" }}
               >

@@ -12,7 +12,7 @@
     "title": "Portfolio Website",
     "description": "A modern and responsive personal portfolio website designed to showcase my skills, experience, and projects. Built using React and Vite for optimal performance, the site features smooth animations powered by Framer Motion, a clean and intuitive layout, and a section dedicated to highlighting my key projects. The portfolio demonstrates my proficiency in front-end development and provides easy navigation for visitors to explore my work, learn about my background, and contact me for potential collaborations.",
     "tech": ["React", "Vite", "Framer Motion", "CSS", "JavaScript", "HTML"],
-    "demoLink": "",
-    "repoLink": ""
+    "demoLink": "https://portfolio-eta-wine-24.vercel.app/",
+    "repoLink": "https://github.com/Erak1t/portfolio"
   }
 ]

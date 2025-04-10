@@ -14,5 +14,21 @@
     "tech": ["React", "Vite", "Framer Motion", "CSS", "JavaScript", "HTML"],
     "demoLink": "https://portfolio-eta-wine-24.vercel.app/",
     "repoLink": "https://github.com/Erak1t/portfolio"
+  },
+  {
+    "image": "projectImage3.png",
+    "title": "PC Shop E-commerce Website",
+    "description": "A fully functional e-commerce platform for PC components, built with Next.js to ensure server-side rendering and fast performance. The store features dynamic product pages, category-based navigation, a shopping cart system, and product reviews. Styled with SCSS and Tailwind CSS for a responsive, modern UI. Integrated with Supabase for real-time database interactions and SQL queries. This project showcases my full-stack development skills, combining front-end interactivity with back-end data management, making it a practical and scalable online store solution.",
+    "tech": [
+      "Next.js",
+      "SCSS",
+      "Tailwind CSS",
+      "JavaScript",
+      "SQL",
+      "HTML",
+      "Supabase"
+    ],
+    "demoLink": "",
+    "repoLink": "https://github.com/Erak1t/pc-shop"
   }
 ]

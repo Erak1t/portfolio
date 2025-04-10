@@ -4,10 +4,12 @@ import { useRef } from "react";
 import projectsData from "../data/projectsData.json";
 import project1Image from "../assets/eventFinder.png";
 import project2Image from "../assets/projectImage2.png";
+import project3Image from "../assets/projectImage3.png";
 
 const imageMap = {
   "eventFinder.png": project1Image,
   "projectImage2.png": project2Image,
+  "projectImage3.png": project3Image,
 };
 
 function Projects() {

@@ -9,6 +9,17 @@ import apiLogo from "../assets/api.svg";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import skillsData from "../data/skillsData.json";
+import sqlLogo from "../assets/sql.svg";
+import tailwindLogo from "../assets/tailwindcss.svg";
+import bootstrapLogo from "../assets/bootstrap.svg";
+import typescriptLogo from "../assets/typescript.svg";
+import postgresqlLogo from "../assets/postgresql.svg";
+import nextjsLogo from "../assets/nextjs.svg";
+import scssLogo from "../assets/scss.svg";
+import githubLogo from "../assets/github.svg";
+import figmaLogo from "../assets/figma.svg";
+import vscodeLogo from "../assets/vscode.svg";
+import viteLogo from "../assets/vite.svg";
 
 const logoMap = {
   "html.svg": htmlLogo,
@@ -17,6 +28,17 @@ const logoMap = {
   "nodejs.svg": nodejsLogo,
   "react.svg": reactLogo,
   "api.svg": apiLogo,
+  "sql.svg": sqlLogo,
+  "tailwind.svg": tailwindLogo,
+  "bootstrap.svg": bootstrapLogo,
+  "typescript.svg": typescriptLogo,
+  "postgresql.svg": postgresqlLogo,
+  "nextjs.svg": nextjsLogo,
+  "scss.svg": scssLogo,
+  "github.svg": githubLogo,
+  "figma.svg": figmaLogo,
+  "vscode.svg": vscodeLogo,
+  "vite.svg": viteLogo,
 };
 
 function Skills() {
@@ -81,7 +103,7 @@ function Skills() {
                 transition={{
                   duration: 0.8,
                   ease: "easeOut",
-                  delay: index * 0.2,
+                  delay: index * 0.1,
                 }}
                 style={{ willChange: "opacity, transform" }}
               >

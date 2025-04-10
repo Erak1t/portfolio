@@ -34,5 +34,65 @@
     "name": "API",
     "summary": "Experienced in integrating REST APIs, handling JSON data, and working with tools like Postman for testing.",
     "details": "I have extensive experience integrating RESTful APIs into web applications, working with JSON data for seamless data exchange. I use tools like Postman and Insomnia for API testing and debugging, and I'm familiar with authentication methods like OAuth and JWT for secure API interactions. I also optimize API calls to improve application performance."
+  },
+  {
+    "logo": "github.svg",
+    "name": "Git",
+    "summary": "Proficient in version control, branching strategies, and collaboration using Git and GitHub.",
+    "details": "I am proficient in using Git for version control, including branching strategies (Git Flow, feature branches) and merging techniques (rebasing, squashing). I collaborate effectively using GitHub, managing pull requests, code reviews, and issue tracking. I also use Git for continuous integration and deployment workflows."
+  },
+  {
+    "logo": "figma.svg",
+    "name": "Figma",
+    "summary": "Skilled in UI/UX design, prototyping, and collaborating on design projects using Figma.",
+    "details": "I have experience with Figma for UI/UX design, creating interactive prototypes and wireframes. I collaborate with designers and developers to ensure design consistency and usability. I also use Figma's design systems and components to streamline the design process and maintain a cohesive visual identity across projects."
+  },
+  {
+    "logo": "vscode.svg",
+    "name": "VS Code",
+    "summary": "Proficient in using Visual Studio Code for development, including extensions and debugging tools.",
+    "details": "I am proficient in using Visual Studio Code as my primary code editor, leveraging its powerful features like IntelliSense, debugging tools, and integrated terminal. I customize my development environment with extensions for linting, formatting, and version control. I also use VS Code's built-in Git integration for seamless collaboration."
+  },
+  {
+    "logo": "nextjs.svg",
+    "name": "Next.js",
+    "summary": "Experienced in building server-rendered React applications, optimizing performance, and implementing static site generation.",
+    "details": "I have hands-on experience with Next.js, building server-rendered React applications that enhance performance and SEO. I utilize features like static site generation (SSG) and server-side rendering (SSR) to optimize loading times and improve user experience. I also implement API routes for backend functionality and use Next.js's built-in routing for seamless navigation."
+  },
+  {
+    "logo": "tailwind.svg",
+    "name": "Tailwind CSS",
+    "summary": "Skilled in using Tailwind CSS for utility-first styling, responsive design, and custom theming.",
+    "details": "I am proficient in using Tailwind CSS for utility-first styling, allowing for rapid development and consistent design. I leverage Tailwind's responsive design features to create adaptable layouts across devices. I also customize Tailwind's configuration for theming and extend its functionality with plugins to meet specific project requirements."
+  },
+  {
+    "logo": "typescript.svg",
+    "name": "TypeScript",
+    "summary": "Experienced in using TypeScript for type safety, interfaces, and enhancing JavaScript applications.",
+    "details": "I have hands-on experience with TypeScript, adding type safety to JavaScript applications. I define interfaces and types to improve code readability and maintainability. I also leverage TypeScript's features like generics and enums to create robust applications. My experience includes integrating TypeScript with React and Node.js for full-stack development."
+  },
+  {
+    "logo": "sql.svg",
+    "name": "SQL",
+    "summary": "Knowledgeable in SQL for database management, querying, and data manipulation.",
+    "details": "I have experience with SQL for managing relational databases, writing complex queries, and performing data manipulation tasks. I am familiar with database design principles, normalization, and indexing strategies to optimize performance. I work with SQL databases like MySQL and PostgreSQL, and I use ORMs like Sequelize for seamless integration with Node.js applications."
+  },
+  {
+    "logo": "scss.svg",
+    "name": "SCSS",
+    "summary": "Proficient in using SCSS for modular styling, variables, and mixins to enhance CSS workflows.",
+    "details": "I am skilled in using SCSS (Sass) for modular and maintainable styling. I leverage features like variables, mixins, and nesting to create reusable styles and streamline CSS workflows. I also use SCSS for theming and responsive design, ensuring consistent styling across different screen sizes. My experience includes integrating SCSS with build tools like Webpack for optimized production builds."
+  },
+  {
+    "logo": "vite.svg",
+    "name": "Vite",
+    "summary": "Familiar with Vite for fast development, hot module replacement, and optimized builds.",
+    "details": "I have experience using Vite as a build tool for modern web applications, benefiting from its fast development server and hot module replacement (HMR) capabilities. I appreciate Vite's optimized build process, which leverages ES modules for improved performance. I also integrate Vite with frameworks like React and Vue for seamless development experiences."
+  },
+  {
+    "logo": "bootstrap.svg",
+    "name": "Bootstrap",
+    "summary": "Proficient in using Bootstrap for responsive design, grid systems, and pre-built components.",
+    "details": "I have hands-on experience with Bootstrap for building responsive web applications. I leverage Bootstrap's grid system and pre-built components to create consistent layouts and user interfaces. I customize Bootstrap themes using SASS variables and mixins to align with project branding. My experience includes integrating Bootstrap with JavaScript for interactive elements and modals."
   }
 ]

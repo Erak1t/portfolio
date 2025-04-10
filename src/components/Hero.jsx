@@ -14,18 +14,18 @@ function Hero() {
       <div className="hero-content">
         <h1 className="hero-title">Erik Sodel</h1>
         <p className="hero-text">
-          I’m a passionate Frontend Developer with experience in building
-          responsive and interactive web applications using React, JavaScript,
-          and CSS. I focus on creating clean, user-friendly interfaces and have
-          a strong eye for detail. Always eager to learn and adapt to new
-          technologies, I aim to build seamless digital experiences. I have
-          hands-on experience with modern development tools like Vite for
-          efficient builds, and I’ve integrated interactive elements such as
-          maps using Leaflet and APIs like Ticketmaster. My approach emphasizes
-          writing clean, maintainable code while ensuring responsive design
-          across devices. I’m dedicated to continuous learning, optimizing user
-          experiences, and collaborating within agile teams to bring creative
-          ideas to life.
+          I’m an enthusiastic Frontend Developer eager to launch my career, with
+          hands-on experience in building responsive and interactive web
+          applications using React, JavaScript, and CSS. I’m dedicated to
+          crafting clean, user-friendly interfaces with a strong attention to
+          detail, ensuring seamless and engaging digital experiences. My focus
+          lies in writing well-structured, maintainable code while prioritizing
+          responsive design to ensure consistency across devices. As a proactive
+          learner, I’m passionate about embracing new challenges, continuously
+          improving my skills, and delivering intuitive, visually appealing
+          solutions. I thrive in collaborative environments and am excited to
+          contribute to a team, bringing creative ideas to life while growing as
+          a developer in my first professional role.
         </p>
         <button
           className="hero-button"
